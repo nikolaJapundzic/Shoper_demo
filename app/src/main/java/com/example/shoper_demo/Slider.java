@@ -6,11 +6,13 @@ import android.widget.SeekBar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.Random;
 
 
 public class Slider extends AppCompatActivity {
 
     public static int slider;
+    Random rand = new Random();
 
 
     @Override
@@ -42,10 +44,23 @@ public class Slider extends AppCompatActivity {
 
                 slider = seekBar.getProgress();
                 if (slider == 100){
-                    System.out.println("slin "+slider+ " good job!");
                     seekBar.setProgress(0);
-                    Intent myIntent = new Intent(Slider.this, Batch_is_gone_window.class);
-                    Slider.this.startActivity(myIntent);
+                    Intent myIntent_001 = new Intent(Slider.this, Batch_is_gone_window_001.class);
+                    Intent myIntent_002 = new Intent(Slider.this, Batch_is_gone_window_002.class);
+
+                    //TO DO put it back on 50
+                    String random =  rand.nextInt(50)+"";
+
+                    if(Integer.valueOf(random)<=25){
+                        Slider.this.startActivity(myIntent_001);
+                    }else {
+                        Slider.this.startActivity(myIntent_002);
+                    }
+
+
+
+
+
                 }else{
                     seekBar.setProgress(0);
                 }

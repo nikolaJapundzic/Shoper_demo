@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Available batches</string>
     <string name="button">Button</string>
+    <string name="ok">OK</string>
+    <string name="exitMain_001">sdasdsaasfa</string>
+    <string name="close">CLOSE</string>
 </resources>
